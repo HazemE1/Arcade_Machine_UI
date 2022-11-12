@@ -1,0 +1,56 @@
+{
+    "name": "InputActions",
+    "maps": [
+        {
+            "name": "GameMovement",
+            "id": "3340805f-53b1-40d9-bc61-ab4c0a264630",
+            "actions": [
+                {
+                    "name": "Välj",
+                    "type": "Button",
+                    "id": "dca9db72-1021-4067-8749-a68a16cdfd03",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "1D Axis",
+                    "id": "c717ff11-abb7-4419-895a-fb2a53888cf1",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Välj",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "03b87ea3-3063-4934-a8a6-8d46762821b0",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Välj",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "e288bbe4-81f7-4117-a231-c93f5a23e410",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Välj",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

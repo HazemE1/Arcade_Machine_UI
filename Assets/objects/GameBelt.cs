@@ -11,12 +11,12 @@ public class GameBelt : MonoBehaviour
 
     [SerializeField] public GameObject belt;
 
-    [SerializeField] public Vector2 spawn;
-    [SerializeField] public Vector2 scale = new Vector2(0.5f, 0.5f);
+    [SerializeField] public Vector3 spawn;
+    [SerializeField] public Vector2 scale = new Vector3(0.5f, 0.5f);
 
     private GameObject[] gameInstances = new GameObject[3];
     private int current = 0;
-  
+
 
     public void Move(InputAction.CallbackContext context)
     {
@@ -25,30 +25,32 @@ public class GameBelt : MonoBehaviour
 
     public void spawnPrefab()
     {
+       
 
-        for (int i = 0; i < 1; i++)
-        {
-            GameObject obj = Instantiate(prefab, spawn, Quaternion.identity);
-            RectTransform rt = (RectTransform)obj.transform;
-            rt.SetParent(belt.transform, true);
-            rt.localScale = scale;
-            gameInstances[i] = obj;
-        }
+        float x = UnityEngine.Random.value * 1000;
+        float y = UnityEngine.Random.value * 1000;
+        GameObject obj = Instantiate(prefab);
+        Transform rt = obj.transform;
+        rt.position = new Vector3(x, y, 0);
+
+
 
     }
 
     void onEnable()
     {
-    
+
     }
     void onDisable()
     {
-    
+
     }
 
 
     public void Start()
     {
+        spawnPrefab();
+        spawnPrefab();
         spawnPrefab();
     }
 

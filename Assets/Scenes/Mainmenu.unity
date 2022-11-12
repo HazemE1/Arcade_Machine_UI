@@ -337,8 +337,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 788459489}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.97432965, y: 0.97432965, z: 0.97432965}
+  m_LocalPosition: {x: 104, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 608798988}
@@ -356,10 +356,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0bff2dc372d18847823e3832b555f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6663284157687608821, guid: ff65369695456cf4b93b3eda8770bc77, type: 3}
+  prefab: {fileID: 6817703384759634327, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
   belt: {fileID: 788459489}
-  spawn: {x: 0, y: 0}
-  scale: {x: 0.5, y: 0.5}
+  spawn: {x: 0, y: 0, z: 0}
+  scale: {x: 1, y: 1}
 --- !u!114 &788459492
 MonoBehaviour:
   m_ObjectHideFlags: 0

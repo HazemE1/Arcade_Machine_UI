@@ -311,6 +311,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &709910576 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7158284129057090188, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
+  m_PrefabInstance: {fileID: 5683350283556205138}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1021932723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -323,8 +328,12 @@ PrefabInstance:
       value: https://media.istockphoto.com/id/1308779422/video/4k-happy-little-asian-girl-enjoy-and-having-fun-with-parents-in-the-car-on-road-trip-vacation.mp4?s=mp4-640x640-is&k=20&c=TtiZ0AcAO5P6gyg8zc7jeN8lrYL78mtKQsXvFZmsRt8=
       objectReference: {fileID: 0}
     - target: {fileID: 1248296223595661729, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
-      propertyPath: m_WaitForFirstFrame
+      propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248296223595661729, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
+      propertyPath: m_WaitForFirstFrame
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2937141154579956114, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -344,8 +353,16 @@ PrefabInstance:
       objectReference: {fileID: 2800000, guid: fa1126a9311a17a4db5514f5ee825aca, type: 3}
     - target: {fileID: 6116104236549921602, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6116104236549921602, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
+      propertyPath: videoObject
+      value: 
+      objectReference: {fileID: 1513265361}
+    - target: {fileID: 6116104236549921602, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
+      propertyPath: rawImageObject
+      value: 
+      objectReference: {fileID: 1667005708}
     - target: {fileID: 6817703384759634324, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -444,7 +461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817703384759634327, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
       propertyPath: m_Name
-      value: GameInst (1)
+      value: right
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
@@ -457,6 +474,16 @@ RectTransform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6817703384759634327, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
   m_PrefabInstance: {fileID: 1021932723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1218328882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1027452227615272582, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
+  m_PrefabInstance: {fileID: 1954796410}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1377719440 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1027452227615272582, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
+  m_PrefabInstance: {fileID: 5683350283556205138}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1438424512
 GameObject:
@@ -534,6 +561,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438424512}
   m_CullTransparentMesh: 0
+--- !u!1 &1513265361 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7158284129057090188, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
+  m_PrefabInstance: {fileID: 1021932723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1596711325
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,6 +753,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1667005708 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1027452227615272582, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
+  m_PrefabInstance: {fileID: 1021932723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1753504358 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7158284129057090188, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
+  m_PrefabInstance: {fileID: 1954796410}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1760080012
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,8 +855,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 2108909133}
     m_Modifications:
     - target: {fileID: 1248296223595661729, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
-      propertyPath: m_WaitForFirstFrame
+      propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248296223595661729, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
+      propertyPath: m_WaitForFirstFrame
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2977794266064747131, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
       propertyPath: m_Enabled
@@ -822,8 +868,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6116104236549921602, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6116104236549921602, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
+      propertyPath: videoObject
+      value: 
+      objectReference: {fileID: 1753504358}
+    - target: {fileID: 6116104236549921602, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
+      propertyPath: videoeObject
+      value: 
+      objectReference: {fileID: 1753504358}
+    - target: {fileID: 6116104236549921602, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
+      propertyPath: rawImageObject
+      value: 
+      objectReference: {fileID: 1218328882}
     - target: {fileID: 6817703384759634320, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
       propertyPath: m_SortingOrder
       value: 24
@@ -926,7 +984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817703384759634327, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
       propertyPath: m_Name
-      value: GameInst
+      value: center
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
@@ -996,13 +1054,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPrefab: {fileID: 6817703384759634327, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
-  picturePrefab: {fileID: 0}
   center: {fileID: 1954796412}
   left: {fileID: 5683350283556205140}
   right: {fileID: 1021932725}
   belt: {fileID: 2108909132}
-  spawn: {x: 0, y: 0, z: 0}
-  scale: {x: 1, y: 1, z: 1}
 --- !u!114 &2108909135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1086,8 +1141,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2108909134}
         m_TargetAssemblyTypeName: GameBelt, Assembly-CSharp
-        m_MethodName: spawnPrefab
-        m_Mode: 0
+        m_MethodName: testGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1178,10 +1233,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2108909133}
     m_Modifications:
-    - target: {fileID: 6116104236549921602, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
-      propertyPath: m_Enabled
+    - target: {fileID: 1248296223595661729, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6116104236549921602, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116104236549921602, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
+      propertyPath: videoObject
+      value: 
+      objectReference: {fileID: 709910576}
+    - target: {fileID: 6116104236549921602, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
+      propertyPath: rawImageObject
+      value: 
+      objectReference: {fileID: 1377719440}
     - target: {fileID: 6817703384759634324, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1268,7 +1335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817703384759634327, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}
       propertyPath: m_Name
-      value: GameInst (2)
+      value: left
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a289cbe4f4081d4c8ea552d3584b23f, type: 3}

@@ -6,7 +6,7 @@
             "id": "3340805f-53b1-40d9-bc61-ab4c0a264630",
             "actions": [
                 {
-                    "name": "Välj",
+                    "name": "höger/vänster",
                     "type": "Button",
                     "id": "dca9db72-1021-4067-8749-a68a16cdfd03",
                     "expectedControlType": "Button",
@@ -15,24 +15,24 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Pausa",
-                    "type": "Button",
+                    "name": "välj",
+                    "type": "Value",
                     "id": "21d7dfbe-195b-49d8-9a3f-fc238b50512a",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
                     "name": "1D Axis",
                     "id": "c717ff11-abb7-4419-895a-fb2a53888cf1",
-                    "path": "1DAxis",
+                    "path": "1DAxis(whichSideWins=1)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Välj",
+                    "action": "höger/vänster",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -43,7 +43,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Välj",
+                    "action": "höger/vänster",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -54,18 +54,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Välj",
+                    "action": "höger/vänster",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "",
                     "id": "e5f5a0eb-a233-4a90-a133-c0c6baffd988",
-                    "path": "<Keyboard>/space",
-                    "interactions": "Press",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Pausa",
+                    "action": "välj",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

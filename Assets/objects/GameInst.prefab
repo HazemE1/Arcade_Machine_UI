@@ -380,22 +380,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6817703384759634327}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5767f18c859d68b4f94e89bbb2d51dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameTitle: 
-  gamePath: 
-  resourcePath: 
-  isVideo: 0
-  currentPosition: 0
-  target: {x: 0, y: 0, z: 0}
   gameTitleObject: {fileID: 6817703384098138388}
   recourceObject: {fileID: 7158284129057090188}
   overlayObject: {fileID: 4647025634831576278}
-  thisObject: {fileID: 6817703384759634327}
-  done: 0
 --- !u!1 &7158284129057090188
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,7 +449,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 1
   m_WaitForFirstFrame: 1

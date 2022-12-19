@@ -11,12 +11,11 @@ using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using UnityEditor;
-using UnityEditor.PackageManager;
 
 public class GameBelt : MonoBehaviour
 {
 
-    private List<String> videoFormat = new() { "mp4" };
+    private List<String> videoFormat = new() { "mp4", "webm", "ogx"};
     private List<String> imageFormat = new() { "jpg", "jpeg" };
     private List<String> gamePathFormat = new() { "exe", "msi" };
 
@@ -26,6 +25,7 @@ public class GameBelt : MonoBehaviour
     public GameObject left;
     public GameObject right;
     public GameObject belt;
+    public Animation selecTGameAnimation;
 
 
     private readonly List<GameInstance> gameInstances = new();
@@ -80,38 +80,51 @@ public class GameBelt : MonoBehaviour
 
     }
 
-    public void testGame()
+    public void testGame(InputAction.CallbackContext context)
     {
+        if (context.phase != InputActionPhase.Performed)
+        {
+            return;
+        }
         print("TEST");
     }
     public void SelectGame(InputAction.CallbackContext context)
     {
 
+        if (context.phase != InputActionPhase.Performed)
+        {
+            return;
+        }
+
+
+        selecTGameAnimation.Play();
         GameInstance instance = gameInstances[current];
         SharedData data = new(instance.gameTitle, instance.gamePath);
         NetworkStream stream = gameClient.GetStream();
         IFormatter formatter = new BinaryFormatter();
         formatter.Serialize(stream, data);
         stream.Flush();
+
     }
 
     private void FetchGames()
     {
-        string dirr = @"C:\Program Files\GameFiles";
+        string dirr = @"/home/hazemel/Documents/GameFiles";
         string[] dirs = Directory.GetDirectories(dirr, "*", SearchOption.TopDirectoryOnly);
 
         foreach (string dir in dirs)
         {
+            string[] directoryParts = dir.Split(@"/");
             string[] files = Directory.GetFiles(dir);
-            string gameTitle = "";
-            string gamePath = "";
+            string gameTitle = directoryParts[^1];
+            print(gameTitle);
+
+            string gamePath = dir;
             bool isVideo = false;
             string mediaPath = "";
             string splashPath = "";
 
-            string[] directoryParts = dir.Split("\\");
 
-            gameTitle = directoryParts[^1];
 
 
             foreach (string file in files)
@@ -164,7 +177,13 @@ public class GameBelt : MonoBehaviour
 
 
         }
-
+        if (gameInstances.Count < 0)
+        {
+            center.SetActive(false);
+            left.SetActive(false);
+            right.SetActive(false);
+            return;
+        }
 
         center.GetComponent<GameObjectBehaviour>().SetGameInstance(gameInstances[0], 1);
         left.GetComponent<GameObjectBehaviour>().SetGameInstance(gameInstances[gameInstances.Count - 1], 0);
@@ -197,10 +216,6 @@ public class GameBelt : MonoBehaviour
     }
 }
 
-
-
-
-
 public class GameInstance
 {
     public string gameTitle;
@@ -208,20 +223,35 @@ public class GameInstance
     public string mediaPath;
     public bool isVideo;
     public string splashScreen;
+
+
+    public RenderTexture videoTexture;
+    public Texture2D imageTexture;
+
+    public Texture2D splashScreenTexture;
+
+
     public GameInstance(string gameTitle, string gamePath, string mediaPath, bool isVideo)
     {
         this.gameTitle = gameTitle;
         this.gamePath = gamePath;
         this.mediaPath = mediaPath;
         this.isVideo = isVideo;
+
+        //Create the texture once so it saves memory (This way it wont create a texture everytime a video is changed)
+
+        if(isVideo){ 
+            this.videoTexture = new(500, 500, 32);
+            this.splashScreenTexture = new(2, 2);
+        }else {
+            this.imageTexture = new(2, 2);
+        }
+
     }
-
-
 }
 
 
-class SharedData
-{
+public class SharedData {
     private String key { get; } // title of game represented as String 
     private String value { get; } // path of game's .exe  represented as String
 
